@@ -1,5 +1,5 @@
 import { it, expect } from 'vitest' // or { test } is the same
-import { add } from './math'
+import { add } from './math.js'
 
 //AAA principle
 it('should summarize all number values in an array', () => {

@@ -1,5 +1,5 @@
 import { it, expect } from 'vitest'
-import { transformToNumber } from './numbers'
+import { transformToNumber } from './numbers.js'
 
 it('Should yield a value which is a typeof number', () => {
 	const input = '2'
