@@ -12,6 +12,7 @@
   "author": "Kadir Zukorlic",
   "license": "ISC",
   "devDependencies": {
+    "jsonwebtoken": "^8.5.1",
     "http-server": "^14.1.0",
     "install": "^0.13.0",
     "npm": "^8.6.0",
