@@ -45,11 +45,22 @@ describe('cleanNumbers()', () => {
 
 		const cleanedNumbers = cleanNumbers(numberValues)
 
-		expect(cleanedNumbers[0]).toBeTypeOf('number')
+		// expect(cleanedNumbers[0]).toBeTypeOf('number')
+		expect(cleanedNumbers).toEqual([1, 2])
 	})
 
 	it('Should throw an error if an array with at least one empty string is provided', () => {
 		const numberValues = ['', 1]
+
+		const cleanFn = () => {
+			cleanNumbers(numberValues)
+		}
+
+		expect(cleanFn).toThrow()
+	})
+
+	it('Should throw an error if an array contains NaN value', () => {
+		const numberValues = ['invalid', 1]
 
 		const cleanFn = () => {
 			cleanNumbers(numberValues)
