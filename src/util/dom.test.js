@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import { it } from 'vitest'
+import { it, vi } from 'vitest'
 import { Window } from 'happy-dom'
 
 import { showError } from './dom'
@@ -12,3 +12,8 @@ const htmlDocumentContent = fs.readFileSync(htmlDocPath).toString()
 const window = new Window()
 const document = window.document
 document.write(htmlDocumentContent)
+vi.stubGlobal('document', document)
+
+it('test', () => {
+	showError('test')
+})
