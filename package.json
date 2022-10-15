@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "vitest --run --reporter verbose",
+    "test": "vitest --run --reporter verbose --environment happy-dom",
     "test:watch": "vitest",
     "start": "http-server -c-1"
   },
@@ -12,9 +12,10 @@
   "author": "Kadir Zukorlic",
   "license": "ISC",
   "devDependencies": {
-    "jsonwebtoken": "^8.5.1",
+    "happy-dom": "^7.5.12",
     "http-server": "^14.1.0",
     "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
     "npm": "^8.6.0",
     "vitest": "^0.9.0"
   }
